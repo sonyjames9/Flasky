@@ -1,0 +1,20 @@
+Flask == 1.0.2
+Werkzeug == 0.14.1
+click == 6.7
+
+
+click==8.0.4
+Flask==2.0.3
+itsdangerous==2.1.2
+Jinja2==3.1.1
+MarkupSafe==2.1.1
+Werkzeug==2.0.3
+
+
+selenium == 3.141.0
+behave ~= 1.2.6
+pytest == 6.0.1
+pytest-bdd == 4.1.0
+urllib3 == 1.24.2
+allure-pytest == 2.8.6
+requests ~= 2.26.0

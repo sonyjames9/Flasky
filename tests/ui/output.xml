@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.7.9 on linux)" generated="20220816 11:06:13.918" rpa="false" schemaversion="3">
+<suite id="s1" name="Ui" source="/opt/git/Flasky/tests/ui">
+<suite id="s1-s1" name="Login" source="/opt/git/Flasky/tests/ui/Login.robot">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220816 11:06:14.159" level="TRACE">Arguments: [ 'http://mtl-centos-box:8080/' | 'Firefox' ]</msg>
+<msg timestamp="20220816 11:06:14.159" level="INFO">Opening browser 'Firefox' to base url 'http://mtl-centos-box:8080/'.</msg>
+<msg timestamp="20220816 11:06:14.161" level="INFO">Firefox driver log is always forced to to: /opt/git/Flasky/tests/ui/geckodriver-1.log</msg>
+<msg timestamp="20220816 11:06:14.177" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220816 11:06:14.178" level="FAIL">WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</msg>
+<msg timestamp="20220816 11:06:14.181" level="DEBUG">Traceback (most recent call last):
+  File "/opt/git/Flasky/py37_env/lib/python3.7/site-packages/selenium/webdriver/common/service.py", line 76, in start
+    creationflags=self.creationflags)
+  File "/usr/local/lib/python3.7/subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "/usr/local/lib/python3.7/subprocess.py", line 1551, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'geckodriver': 'geckodriver'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/git/Flasky/py37_env/lib/python3.7/site-packages/SeleniumLibrary/__init__.py", line 496, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+  File "/opt/git/Flasky/py37_env/lib/python3.7/site-packages/robotlibcore.py", line 94, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+  File "/opt/git/Flasky/py37_env/lib/python3.7/site-packages/SeleniumLibrary/keywords/browsermanagement.py", line 302, in open_browser
+    executable_path,
+  File "/opt/git/Flasky/py37_env/lib/python3.7/site-packages/SeleniumLibrary/keywords/browsermanagement.py", line 331, in _make_new_browser
+    executable_path,
+  File "/opt/git/Flasky/py37_env/lib/python3.7/site-packages/SeleniumLibrary/keywords/browsermanagement.py", line 723, in _make_driver
+    executable_path=executable_path,
+  File "/opt/git/Flasky/py37_env/lib/python3.7/site-packages/SeleniumLibrary/keywords/webdrivertools/webdrivertools.py", line 89, in create_driver
+    executable_path=executable_path,
+  File "/opt/git/Flasky/py37_env/lib/python3.7/site-packages/SeleniumLibrary/keywords/webdrivertools/webdrivertools.py", line 204, in create_firefox
+    **desired_capabilities,
+  File "/opt/git/Flasky/py37_env/lib/python3.7/site-packages/selenium/webdriver/firefox/webdriver.py", line 172, in __init__
+    self.service.start()
+  File "/opt/git/Flasky/py37_env/lib/python3.7/site-packages/selenium/webdriver/common/service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'geckodriver' executable needs to be in PATH.</msg>
+<status status="FAIL" starttime="20220816 11:06:14.158" endtime="20220816 11:06:14.181"/>
+</kw>
+<test id="s1-s1-t1" name="Google Search" line="16">
+<status status="FAIL" starttime="20220816 11:06:14.182" endtime="20220816 11:06:14.184">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<msg timestamp="20220816 11:06:14.185" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20220816 11:06:14.185" level="DEBUG">Closing all browsers.</msg>
+<msg timestamp="20220816 11:06:14.185" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220816 11:06:14.185" endtime="20220816 11:06:14.185"/>
+</kw>
+<doc>Test suite for valid login on Demo app.
+
+Keywords are imported from the resource file</doc>
+<status status="FAIL" starttime="20220816 11:06:13.957" endtime="20220816 11:06:14.185">Suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</suite>
+<status status="FAIL" starttime="20220816 11:06:13.920" endtime="20220816 11:06:14.187"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Ui">Ui</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Login">Ui.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
